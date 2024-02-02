@@ -106,6 +106,19 @@ ziyixie@ZIYIdeMacBook-Pro exercises % git commit -m "commit A.txt"
 [commit-one-file df257d0] commit A.txt
  1 file changed, 1 insertion(+)
  create mode 100644 A.txt
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git verify                  
+Verifying the commit-one-file exercise. Hold on...
+Exercise: commit-one-file        
+Status: PASSED        
+You can see the easiest known solution and further info at:        
+https://gitexercises.fracz.com/e/commit-one-file/mqla        
+
+Next task: merge-conflict        
+In order to start, execute: git start next        
+
+See your progress and instructions at:        
+https://gitexercises.fracz.com/c/mqla 
 ```
 
 ```
