@@ -60,6 +60,55 @@ See your progress and instructions at:
 https://gitexercises.fracz.com/c/mqla 
 ```
 ```
+ziyixie@ZIYIdeMacBook-Pro exercises % git start commit-one-file
+Preparing the exercise environment, hold on...
+Exercise commit-one-file started!
+Read the README.md for instructions or view them in browser:
+http://gitexercises.fracz.com/e/commit-one-file
+
+ziyixie@ZIYIdeMacBook-Pro exercises % ls
+A.txt		B.txt		README.md	start.sh
+
+ziyixie@ZIYIdeMacBook-Pro exercises % cat README.md 
+## Commit one file
+There are two files created in the root project directory - `A.txt` and `B.txt`.
+
+The goal is to commit only one of them.
+
+NOTE: Remember that you can submit your solutions with `git verify` command instead of `git push`.
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git status
+位于分支 commit-one-file
+您的分支与上游分支 'origin/commit-one-file' 一致。
+
+未跟踪的文件:
+  （使用 "git add <文件>..." 以包含要提交的内容）
+	A.txt
+	B.txt
+
+提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git add A.txt
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git status
+位于分支 commit-one-file
+您的分支与上游分支 'origin/commit-one-file' 一致。
+
+要提交的变更：
+  （使用 "git restore --staged <文件>..." 以取消暂存）
+	新文件：   A.txt
+
+未跟踪的文件:
+  （使用 "git add <文件>..." 以包含要提交的内容）
+	B.txt
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git commit -m "commit A.txt"
+[commit-one-file df257d0] commit A.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 A.txt
+```
+
+```
 ziyixie@ZIYIdeMacBook-Pro exercises % git start next
 Preparing the exercise environment, hold on...
 Exercise merge-conflict started!
