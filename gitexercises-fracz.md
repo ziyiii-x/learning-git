@@ -120,54 +120,85 @@ In order to start, execute: git start next
 See your progress and instructions at:        
 https://gitexercises.fracz.com/c/mqla 
 ```
-
 ```
-ziyixie@ZIYIdeMacBook-Pro exercises % git start next
+ziyixie@ZIYIdeMacBook-Pro exercises % git start commit-one-file-staged
 Preparing the exercise environment, hold on...
-Exercise merge-conflict started!
+Exercise commit-one-file-staged started!
 Read the README.md for instructions or view them in browser:
-http://gitexercises.fracz.com/e/merge-conflict
-
-ziyixie@ZIYIdeMacBook-Pro exercises % cat README.md 
-## Resolve a merge conflict
-
-Merge conflict appears when you change the same part of the same file differently 
-in the two branches you're merging together. 
-Conflicts require developer to solve them by hand.
-
-Your repository looks like this:
-
-            HEAD
-             |
-        merge-conflict
-             |
-    A <----- B
-     \
-      \----- C
-             |
-    another-piece-of-work
-         
-You want to merge the `another-piece-of-work` into your current branch. 
-This will cause a merge conflict which you have to resolve. 
-Your repository should look like this:
-
-                     HEAD
-                      |
-                 merge-conflict
-                      |
-    A <----- B <----- D
-     \               /
-      \----- C <----/
-             |
-    another-piece-of-work
+http://gitexercises.fracz.com/e/commit-one-file-staged
 
 ziyixie@ZIYIdeMacBook-Pro exercises % ls
-README.md	equation.txt	start.sh
+A.txt		B.txt		README.md	start.sh
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git status
+位于分支 commit-one-file-staged
+您的分支与上游分支 'origin/commit-one-file-staged' 一致。
+
+要提交的变更：
+  （使用 "git restore --staged <文件>..." 以取消暂存）
+	新文件：   A.txt
+	新文件：   B.txt
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git reset A.txt
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git status
+位于分支 commit-one-file-staged
+您的分支与上游分支 'origin/commit-one-file-staged' 一致。
+
+要提交的变更：
+  （使用 "git restore --staged <文件>..." 以取消暂存）
+	新文件：   B.txt
+
+未跟踪的文件:
+  （使用 "git add <文件>..." 以包含要提交的内容）
+	A.txt
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git commit -m "Commit B.txt file"
+[commit-one-file-staged 8508780] Commit B.txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 B.txt
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git verify
+Verifying the commit-one-file-staged exercise. Hold on...
+Exercise: commit-one-file-staged        
+Status: PASSED        
+You can see the easiest known solution and further info at:        
+https://gitexercises.fracz.com/e/commit-one-file-staged/mqla        
+
+Next task: merge-conflict        
+In order to start, execute: git start next        
+
+See your progress and instructions at:        
+https://gitexercises.fracz.com/c/mqla 
+```
+```
+ziyixie@ZIYIdeMacBook-Pro exercises % git start ignore-them
+Preparing the exercise environment, hold on...
+Exercise ignore-them started!
+Read the README.md for instructions or view them in browser:
+http://gitexercises.fracz.com/e/ignore-them
 
 ziyixie@ZIYIdeMacBook-Pro exercises % git branch
   another-piece-of-work
+  commit-one-file
+  commit-one-file-staged
+* ignore-them
   master
-* merge-conflict
+  merge-conflict
+
+ziyixie@ZIYIdeMacBook-Pro exercises % git status
+位于分支 ignore-them
+您的分支与上游分支 'origin/ignore-them' 一致。
+
+未跟踪的文件:
+  （使用 "git add <文件>..." 以包含要提交的内容）
+	file.txt
+	libraries/
+	output.o
+	program.exe
+
+提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
 
 
 ```
+
